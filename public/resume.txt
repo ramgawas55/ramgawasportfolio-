@@ -1,0 +1,33 @@
+Ram Sunil Gawas
+Aspiring DevOps & Linux System Engineer
+Mumbai, Maharashtra
+Phone: +91-9324863145
+Email: ramgawas55@gmail.com
+LinkedIn: https://linkedin.com/in/ram-gawas-2215a12a7
+GitHub: https://github.com/ramgawas55
+
+Profile Summary
+Aspiring DevOps and Linux System Engineer with hands-on lab experience in Linux administration, AWS cloud services, Infrastructure as Code (Terraform), and configuration management (Ansible). Skilled in server deployment, automation, networking, security hardening, and troubleshooting. Strong foundation in system reliability, scripting, and cloud infrastructure management.
+
+Skills
+- Linux Administration: User management, permissions, LVM, SSH, CRON, package management
+- Cloud: AWS EC2, S3, IAM basics
+- Automation/IaC: Ansible, Terraform, Shell Scripting, YAML
+- Networking: TCP/IP, DNS, DHCP, SSH, VLAN, Subnetting, Routing basics
+- Web/DB: Apache, Nginx, MySQL, MongoDB
+- Security: firewall, iptables, SSL/TLS, OpenSSL, ACL
+- File Services: NFS, Samba
+- Monitoring & Troubleshooting: top, ps, netstat, journalctl, systemctl
+- Version Control: Git, GitHub
+- Virtualization: VMware
+
+Education
+- B.Sc. Information Technology | Mumbai University (CGPA - 6.35 | 2023–2025)
+- Class XII | Maharashtra Board | Mumbai (59.33% | 2022)
+- Class X | Maharashtra Board | Mumbai (66.00% | 2020)
+
+Practical Experience
+- Linux Server Administration Lab — user management, package installs, LVM setup, SSH configuration, CRON scheduling, and troubleshooting in CentOS/RHEL lab environments.
+- AWS Cloud Practice — launched EC2 instances, configured security groups, managed IAM policies, created S3 buckets, and deployed Apache/Nginx web servers.
+- Automation with Ansible — developed playbooks to automate web server setup, database installation, and firewall rules across Linux nodes.
+- Infrastructure Provisioning with Terraform — created Terraform configurations to provision AWS EC2 instances and network security rules using Infrastructure as Code principles.
