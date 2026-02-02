@@ -52,23 +52,24 @@ export const skillCategories: SkillCategory[] = [
     items: [
       {
         name: "Linux Administration",
-        level: 88,
-        tooltip: "Users, permissions, LVM, SSH, CRON, package management",
+        level: 90,
+        tooltip:
+          "User & group management, file permissions, ACLs, LVM, process & service management, cron jobs, package management, systemctl, journalctl",
       },
       {
-        name: "AWS Core",
+        name: "Cloud (AWS)",
+        level: 84,
+        tooltip: "EC2, S3, IAM, security groups, key pairs",
+      },
+      {
+        name: "Automation & Scripting",
         level: 82,
-        tooltip: "EC2, S3, IAM, security groups, and basic cloud ops",
+        tooltip: "Ansible, Terraform, Shell scripting (Bash), YAML",
       },
       {
-        name: "Ansible",
+        name: "Networking",
         level: 80,
-        tooltip: "Playbooks for web server setup and configuration management",
-      },
-      {
-        name: "Terraform",
-        level: 78,
-        tooltip: "Infrastructure as Code for AWS provisioning",
+        tooltip: "TCP/IP, UDP, DNS, DHCP, subnetting, VLANs, routing, SSH",
       },
     ],
   },
@@ -76,24 +77,24 @@ export const skillCategories: SkillCategory[] = [
     title: "Backend",
     items: [
       {
-        name: "Shell Scripting",
-        level: 84,
-        tooltip: "Automation scripts and task orchestration",
-      },
-      {
-        name: "Security Hardening",
-        level: 76,
-        tooltip: "Firewall rules, SSL/TLS, OpenSSL, and access controls",
-      },
-      {
-        name: "Monitoring",
-        level: 74,
-        tooltip: "top, ps, netstat, journalctl, systemctl",
-      },
-      {
-        name: "Networking",
+        name: "Web & Databases",
         level: 78,
-        tooltip: "TCP/IP, DNS, DHCP, SSH, VLAN, subnetting basics",
+        tooltip: "Apache, Nginx, MySQL, MongoDB",
+      },
+      {
+        name: "Security",
+        level: 78,
+        tooltip: "firewalld, iptables, SSH hardening, SSL/TLS, OpenSSL",
+      },
+      {
+        name: "File Services & Storage",
+        level: 74,
+        tooltip: "NFS, Samba, FTP, LVM",
+      },
+      {
+        name: "Monitoring & Troubleshooting",
+        level: 76,
+        tooltip: "top, ps, sar, netstat/ss, systemctl, journalctl, logs",
       },
     ],
   },
@@ -101,44 +102,14 @@ export const skillCategories: SkillCategory[] = [
     title: "Frontend",
     items: [
       {
-        name: "Web Servers",
-        level: 82,
-        tooltip: "Apache and Nginx setup, tuning, and maintenance",
-      },
-      {
-        name: "Version Control",
-        level: 80,
-        tooltip: "Git and GitHub workflows",
+        name: "Version Control & CI/CD",
+        level: 78,
+        tooltip: "Git, GitHub, CI/CD fundamentals",
       },
       {
         name: "Virtualization",
-        level: 72,
-        tooltip: "VMware setup and lab environment management",
-      },
-      {
-        name: "File Services",
-        level: 70,
-        tooltip: "NFS and Samba sharing fundamentals",
-      },
-    ],
-  },
-  {
-    title: "Databases",
-    items: [
-      {
-        name: "MySQL",
-        level: 76,
-        tooltip: "Database setup, access control, and backups",
-      },
-      {
-        name: "MongoDB",
-        level: 72,
-        tooltip: "Collections, indexing basics, and CRUD",
-      },
-      {
-        name: "Database Security",
-        level: 70,
-        tooltip: "User roles, permissions, and access policies",
+        level: 74,
+        tooltip: "VMware",
       },
     ],
   },
@@ -239,10 +210,16 @@ export const terminalCommands: TerminalCommand[] = [
   {
     command: "skills",
     output: [
-      "Linux & DevOps: Linux Admin, AWS EC2/S3, Ansible, Terraform",
-      "Backend: Shell, Security, Monitoring, Networking",
-      "Frontend: Apache, Nginx, Git, VMware",
-      "Databases: MySQL, MongoDB",
+      "Linux Administration: Users, permissions, ACLs, LVM, systemctl, journalctl",
+      "Cloud (AWS): EC2, S3, IAM, security groups, key pairs",
+      "Automation & Scripting: Ansible, Terraform, Bash, YAML",
+      "Networking: TCP/IP, UDP, DNS, DHCP, VLANs, routing, SSH",
+      "Web & Databases: Apache, Nginx, MySQL, MongoDB",
+      "Security: firewalld, iptables, SSH hardening, SSL/TLS",
+      "File Services & Storage: NFS, Samba, FTP, LVM",
+      "Monitoring & Troubleshooting: top, ps, sar, netstat/ss, logs",
+      "Version Control & CI/CD: Git, GitHub, CI/CD fundamentals",
+      "Virtualization: VMware",
     ],
   },
   {
