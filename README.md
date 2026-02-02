@@ -1,4 +1,4 @@
-# Linux x Spider UX Portfolio
+# Linux x Devops Portfolio
 
 Production-ready personal portfolio inspired by Linux terminals and Spider-Man motion language. Built with Next.js App Router, Tailwind CSS, Framer Motion, and TypeScript. Includes an interactive terminal mode, dynamic project filtering, and a validated contact API route.
 
