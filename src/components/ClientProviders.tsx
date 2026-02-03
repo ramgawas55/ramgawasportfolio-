@@ -9,6 +9,10 @@ export default function ClientProviders({ children }: { children: ReactNode }) {
   const pathname = usePathname();
 
   useEffect(() => {
+    const trackedPaths = new Set(["/", "/projects", "/contact"]);
+    if (!trackedPaths.has(pathname)) {
+      return;
+    }
     fetch("/api/track", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
