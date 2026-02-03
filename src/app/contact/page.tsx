@@ -34,6 +34,15 @@ export default function ContactPage() {
         const data = await response.json();
         throw new Error(data.error || "Unable to send message.");
       }
+      fetch("/api/track", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          event: "contact_submit",
+          path: "/contact",
+          email: form.email,
+        }),
+      }).catch(() => {});
       setForm(initialState);
       toast.success("Message sent. Expect a response within 24 hours.");
     } catch (error) {

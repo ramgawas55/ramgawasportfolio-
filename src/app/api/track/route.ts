@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
-import { profile } from "@/data/profile";
 import { sendTelegramAlert } from "@/lib/telegram";
 
 type TrackPayload = {
   event?: string;
   path?: string;
+  email?: string;
 };
 
 const trackedPaths = new Set(["/", "/projects", "/contact"]);
@@ -35,14 +35,14 @@ export async function POST(request: Request) {
   rateLimitByIp.set(ip, now);
 
   const userAgent = request.headers.get("user-agent") ?? "unknown";
-  const contactEmail = process.env.CONTACT_EMAIL ?? profile.email;
+  const visitorEmail = payload.email?.trim() || "unknown";
   const lines = [
     "Visitor alert",
     `Event: ${event}`,
     `Path: ${path}`,
     `IP: ${ip}`,
     `User-Agent: ${userAgent}`,
-    `Email: ${contactEmail}`,
+    `Email: ${visitorEmail}`,
   ];
 
   await sendTelegramAlert(lines.join("\n"));
