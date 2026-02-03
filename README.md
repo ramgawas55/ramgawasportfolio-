@@ -1,16 +1,24 @@
-# Linux x Devops Portfolio
+# Linux x DevOps Portfolio
 
-Production-ready personal portfolio inspired by Linux terminals and Spider-Man motion language. Built with Next.js App Router, Tailwind CSS, Framer Motion, and TypeScript. Includes an interactive terminal mode, dynamic project filtering, and a validated contact API route.
+A terminal-inspired portfolio with motion-led UI, a live contact form, and lightweight visitor tracking. Built to feel fast and personal, with a CLI-style terminal mode and a downloadable resume endpoint.
 
-## Tech Stack
+## Highlights
 
-- Next.js App Router + React 19
+- Terminal-style navigation page
+- Animated hero and section transitions
+- Contact form with validation + Telegram alerts
+- Visitor alerts for key pages
+- Resume download route with tracking
+
+## Stack
+
+- Next.js App Router
+- React 19
 - Tailwind CSS
 - Framer Motion
 - TypeScript
-- Node.js API routes
 
-## Local Development
+## Local Setup
 
 ```bash
 npm install
@@ -21,43 +29,32 @@ Open http://localhost:3000.
 
 ## Environment Variables
 
-Copy the example file and adjust values as needed:
-
 ```bash
 cp .env.example .env.local
 ```
 
 | Variable | Purpose |
 | --- | --- |
-| CONTACT_EMAIL | Contact API target recipient |
+| CONTACT_EMAIL | Contact API recipient |
+| TELEGRAM_BOT_TOKEN | Telegram bot token for alerts |
+| TELEGRAM_CHAT_ID | Telegram chat ID for alerts |
 
-## Folder Structure
+## Project Map
 
-- src/app: App Router pages, API route, and layout
-- src/components: Reusable UI and motion components
-- src/data: Profile data used across pages and terminal mode
-- src/types: Shared TypeScript types
-- public: Static assets and downloadable resume
+- src/app: routes, API handlers, layouts
+- src/components: UI building blocks
+- src/data: profile data and content
+- src/types: shared TypeScript types
+- public: static assets + resume
 
-## Render Deployment
+## Deployment (Render)
 
-1. Create a new Web Service on Render.
-2. Connect the GitHub repository.
-3. Set Build Command: `npm install && npm run build`
-4. Set Start Command: `npm run start`
-5. Add Environment Variables: `CONTACT_EMAIL`
-6. Choose Node version 20+ in the Render settings.
-
-## Git Commands
-
-```bash
-git init
-git add .
-git commit -m "Initial portfolio build"
-git branch -M main
-git remote add origin <your-repo-url>
-git push -u origin main
-```
+1. Create a new Web Service
+2. Connect the GitHub repository
+3. Build Command: `npm install && npm run build`
+4. Start Command: `npm run start`
+5. Set environment variables from the table above
+6. Use Node 20+
 
 ## Scripts
 
