@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { profile } from "@/data/profile";
 import { sendTelegramAlert } from "@/lib/telegram";
 
 type TrackPayload = {
@@ -8,7 +9,7 @@ type TrackPayload = {
 
 const trackedPaths = new Set(["/", "/projects", "/contact"]);
 const rateLimitByIp = new Map<string, number>();
-const rateLimitWindowMs = 3 * 60 * 60 * 1000;
+const rateLimitWindowMs = 60 * 1000;
 
 export async function POST(request: Request) {
   const payload = (await request.json()) as TrackPayload;
@@ -35,6 +36,7 @@ export async function POST(request: Request) {
 
   const userAgent = request.headers.get("user-agent") ?? "unknown";
   const timestamp = new Date(now).toISOString();
+  const contactEmail = process.env.CONTACT_EMAIL ?? profile.email;
   const lines = [
     "Visitor alert",
     `Event: ${event}`,
@@ -42,6 +44,7 @@ export async function POST(request: Request) {
     `IP: ${ip}`,
     `User-Agent: ${userAgent}`,
     `Time: ${timestamp}`,
+    `Email: ${contactEmail}`,
   ];
 
   await sendTelegramAlert(lines.join("\n"));
