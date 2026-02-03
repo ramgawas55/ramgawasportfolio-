@@ -6,6 +6,15 @@ import TypingText from "@/components/TypingText";
 import { profile } from "@/data/profile";
 
 export default function Home() {
+  const handleResumeDownload = () => {
+    fetch("/api/track", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ event: "resume_download", path: "/" }),
+      keepalive: true,
+    }).catch(() => {});
+  };
+
   return (
     <div className="relative overflow-hidden">
       <section className="mx-auto flex min-h-[80vh] w-full max-w-6xl flex-col items-start justify-center px-6 py-20">
@@ -54,6 +63,7 @@ export default function Home() {
             href="/resume.txt"
             className="rounded-full border border-[#ff2d55]/60 px-6 py-3 text-xs uppercase tracking-[0.3em] text-[#ff2d55] transition hover:bg-[#ff2d55] hover:text-[#0b0f0b]"
             download
+            onClick={handleResumeDownload}
           >
             Download Resume
           </a>

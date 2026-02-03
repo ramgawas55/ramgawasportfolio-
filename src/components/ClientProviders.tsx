@@ -1,10 +1,21 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import { Toaster } from "react-hot-toast";
+import { usePathname } from "next/navigation";
 import KeyboardNavigator from "@/components/KeyboardNavigator";
 
 export default function ClientProviders({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    fetch("/api/track", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ event: "page_view", path: pathname }),
+    }).catch(() => {});
+  }, [pathname]);
+
   return (
     <>
       <KeyboardNavigator />

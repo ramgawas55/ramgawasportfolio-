@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sendTelegramAlert } from "@/lib/telegram";
 
 type ContactPayload = {
   name?: string;
@@ -36,6 +37,12 @@ export async function POST(request: Request) {
   }
 
   const recipient = process.env.CONTACT_EMAIL ?? "hello@ramgawas.dev";
+
+  await sendTelegramAlert(
+    ["New contact form submission", `Name: ${name}`, `Email: ${email}`, "", message].join(
+      "\n"
+    )
+  );
 
   return NextResponse.json({
     success: true,
