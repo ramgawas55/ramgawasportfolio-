@@ -9,7 +9,7 @@ type TrackPayload = {
 
 const trackedPaths = new Set(["/", "/projects", "/contact"]);
 const rateLimitByIp = new Map<string, number>();
-const rateLimitWindowMs = 60 * 1000;
+const rateLimitWindowMs = 0;
 
 export async function POST(request: Request) {
   const payload = (await request.json()) as TrackPayload;
@@ -35,7 +35,6 @@ export async function POST(request: Request) {
   rateLimitByIp.set(ip, now);
 
   const userAgent = request.headers.get("user-agent") ?? "unknown";
-  const timestamp = new Date(now).toISOString();
   const contactEmail = process.env.CONTACT_EMAIL ?? profile.email;
   const lines = [
     "Visitor alert",
@@ -43,7 +42,6 @@ export async function POST(request: Request) {
     `Path: ${path}`,
     `IP: ${ip}`,
     `User-Agent: ${userAgent}`,
-    `Time: ${timestamp}`,
     `Email: ${contactEmail}`,
   ];
 
