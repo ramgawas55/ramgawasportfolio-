@@ -117,6 +117,19 @@ export const skillCategories: SkillCategory[] = [
 
 export const projects: Project[] = [
   {
+    title: "SecureDistro (SentinelOS-Lite)",
+    summary:
+      "Linux-focused self-healing security stack with an agent, rule engine, anomaly detection, REST API, dashboard, CLI, and Telegram alerting.",
+    stack: ["Linux", "Security", "Docker", "Node.js", "Next.js", "Python"],
+    category: "DevOps",
+    github: "https://github.com/ramgawas55/SecureDistro.git",
+    highlights: [
+      "Automated service recovery with rule-driven actions",
+      "Shipped REST API with SQLite storage and token auth",
+      "Built dashboard and CLI for operational workflows",
+    ],
+  },
+  {
     title: "Linux Server Administration Lab",
     summary:
       "Hands-on lab focused on Linux user management, LVM, SSH hardening, CRON scheduling, and troubleshooting.",
@@ -225,6 +238,7 @@ export const terminalCommands: TerminalCommand[] = [
   {
     command: "projects",
     output: [
+      "SecureDistro (SentinelOS-Lite) — self-healing security stack",
       "Linux Server Administration Lab — core Linux workflows",
       "AWS Cloud Practice — EC2, S3, IAM deployment labs",
       "Infrastructure Automation — Ansible and Terraform",
