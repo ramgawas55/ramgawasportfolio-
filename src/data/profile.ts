@@ -147,7 +147,7 @@ export const projects: Project[] = [
     summary:
       "Deployed EC2 instances, set up security groups, managed IAM policies, and configured S3 storage.",
     stack: ["AWS EC2", "S3", "IAM", "Apache", "Nginx"],
-    category: "DevOps",
+    category: "AWS",
     github: "https://github.com/ramgawas55",
     highlights: [
       "Provisioned web servers and deployed sample sites",
