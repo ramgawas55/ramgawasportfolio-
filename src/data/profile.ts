@@ -11,6 +11,7 @@ export const profile = {
   title: "Aspiring DevOps & Linux System Engineer",
   location: "Mumbai, Maharashtra",
   email: "ramgawas55@gmail.com",
+  linkedin: "https://www.linkedin.com/in/ram-gawas-2215a12a7/",
   summary:
     "Aspiring DevOps and Linux System Engineer with hands-on lab experience in Linux administration, AWS cloud services, Infrastructure as Code, and configuration management. Skilled in server deployment, automation, networking, security hardening, and troubleshooting with a foundation in system reliability and cloud infrastructure management.",
 };

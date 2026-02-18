@@ -132,6 +132,19 @@ export default function ContactPage() {
           </div>
           <div className="rounded-2xl border border-[#1f2a20] bg-[#0b0f0b] p-4 text-[#e6ffe9]">
             <div className="text-xs uppercase tracking-[0.3em] text-[#8aa18a]">
+              LinkedIn
+            </div>
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-2 inline-block text-lg text-[#4dff8a] transition hover:text-[#ff2d55]"
+            >
+              {profile.linkedin}
+            </a>
+          </div>
+          <div className="rounded-2xl border border-[#1f2a20] bg-[#0b0f0b] p-4 text-[#e6ffe9]">
+            <div className="text-xs uppercase tracking-[0.3em] text-[#8aa18a]">
               Availability
             </div>
             <div className="mt-2 text-lg">Weekdays 10:00–19:00 IST</div>
