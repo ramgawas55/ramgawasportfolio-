@@ -117,6 +117,19 @@ export const skillCategories: SkillCategory[] = [
 
 export const projects: Project[] = [
   {
+    title: "AUTO PATCH",
+    summary:
+      "Centralized Linux patch management platform with agent polling, approvals, audit logs, and a clean dashboard.",
+    stack: ["FastAPI", "PostgreSQL", "Next.js", "Docker", "Linux", "Python"],
+    category: "DevOps",
+    github: "https://github.com/ramgawas55/Auto-Patch.git",
+    highlights: [
+      "Built approvals workflow with audit logs and scheduling",
+      "Agent checks in every minute to report patch status",
+      "Render-ready deployment with Blueprint support",
+    ],
+  },
+  {
     title: "SecureDistro (SentinelOS-Lite)",
     summary:
       "Linux-focused self-healing security stack with an agent, rule engine, anomaly detection, REST API, dashboard, CLI, and Telegram alerting.",
@@ -238,6 +251,7 @@ export const terminalCommands: TerminalCommand[] = [
   {
     command: "projects",
     output: [
+      "AUTO PATCH — centralized Linux patch management",
       "SecureDistro (SentinelOS-Lite) — self-healing security stack",
       "Linux Server Administration Lab — core Linux workflows",
       "AWS Cloud Practice — EC2, S3, IAM deployment labs",
