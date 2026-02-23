@@ -15,7 +15,7 @@ export default function TerminalPage() {
         title: "About",
         content: [
           profile.summary,
-          "Linux-first architectures, scalable UI systems, and resilient delivery.",
+          profile.subtitle,
         ],
       };
     }
@@ -36,7 +36,7 @@ export default function TerminalPage() {
     if (section === "contact") {
       return {
         title: "Contact",
-        content: [profile.email, "Weekdays 10:00–19:00 IST"],
+        content: [profile.email, profile.phone, profile.location],
       };
     }
     return {
@@ -49,23 +49,23 @@ export default function TerminalPage() {
     <Section
       eyebrow="terminal"
       title="Interactive terminal mode"
-      description="Use CLI commands to navigate through portfolio data without leaving the terminal."
+      description="Use CLI commands to explore portfolio data with terminal-style output."
     >
       <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
         <TerminalConsole onSectionChange={setSection} />
-        <div className="rounded-3xl border border-[#1f2a20] bg-[#0f1410] p-6">
-          <div className="flex items-center justify-between border-b border-[#1f2a20] pb-4">
-            <h3 className="font-mono text-sm uppercase tracking-[0.3em] text-[#4dff8a]">
+        <div className="rounded-3xl border border-[#1a1a1a] bg-[#050505] p-6">
+          <div className="flex items-center justify-between border-b border-[#1a1a1a] pb-4">
+            <h3 className="font-mono text-sm uppercase tracking-[0.3em] text-[#ff3b30]">
               {sectionData.title}
             </h3>
-            <span className="text-xs uppercase tracking-[0.3em] text-[#8aa18a]">
+            <span className="text-xs uppercase tracking-[0.3em] text-[#c9c9c9]">
               live
             </span>
           </div>
-          <div className="mt-4 space-y-3 text-sm text-[#8aa18a]">
+          <div className="mt-4 space-y-3 text-sm text-[#c9c9c9]">
             {sectionData.content.map((line) => (
               <div key={line} className="flex gap-2">
-                <span className="text-[#ff2d55]">»</span>
+                <span className="text-[#ff4d22]">»</span>
                 <span>{line}</span>
               </div>
             ))}

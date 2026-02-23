@@ -15,14 +15,14 @@ export default function Section({
     <section className="py-16">
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="mb-10">
-          <p className="font-mono text-xs uppercase tracking-[0.4em] text-[#4dff8a]">
+          <p className="font-mono text-xs uppercase tracking-[0.4em] text-[#ff3b30]">
             {eyebrow}
           </p>
-          <h2 className="mt-4 text-3xl font-semibold text-[#e6ffe9] md:text-4xl">
+          <h2 className="mt-4 text-3xl font-semibold text-[#ffffff] md:text-4xl">
             {title}
           </h2>
           {description ? (
-            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[#8aa18a] md:text-base">
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[#c9c9c9] md:text-base">
               {description}
             </p>
           ) : null}

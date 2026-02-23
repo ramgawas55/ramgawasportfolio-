@@ -7,19 +7,18 @@ const navItems = [
   { href: "/projects", label: "Projects" },
   { href: "/experience", label: "Experience" },
   { href: "/terminal", label: "Terminal" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-[#1f2a20]/70 bg-[#0b0f0b]/80 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-[#1a1a1a]/70 bg-[#000000]/85 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="flex items-center gap-3 font-mono text-sm uppercase tracking-[0.2em] text-[#4dff8a]"
+          className="flex items-center gap-3 font-mono text-sm uppercase tracking-[0.2em] text-[#ff3b30]"
         >
-          <span className="text-[#ff2d55]">rg</span>
-          <span className="text-[#e6ffe9]">/</span>
+          <span className="text-[#ff4d22]">rg</span>
+          <span className="text-[#ffffff]">/</span>
           <span>shell</span>
         </Link>
         <nav aria-label="Primary" className="hidden gap-6 md:flex">
@@ -27,7 +26,7 @@ export default function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm uppercase tracking-[0.2em] text-[#8aa18a] transition hover:text-[#4dff8a]"
+              className="neon-underline text-sm uppercase tracking-[0.2em] text-[#c9c9c9] transition hover:text-[#ff3b30]"
             >
               {item.label}
             </Link>
@@ -35,9 +34,9 @@ export default function SiteHeader() {
         </nav>
         <Link
           href="/contact"
-          className="rounded-full border border-[#ff2d55]/60 px-4 py-2 text-xs uppercase tracking-[0.3em] text-[#ff2d55] transition hover:bg-[#ff2d55] hover:text-[#0b0f0b]"
+          className="rounded-full border border-[#ff4d22]/70 px-4 py-2 text-xs uppercase tracking-[0.3em] text-[#ff4d22] transition hover:bg-[#ff4d22] hover:text-[#000000]"
         >
-          Hire Me
+          Contact
         </Link>
       </div>
     </header>

@@ -3,7 +3,7 @@ import path from "path";
 import { NextResponse } from "next/server";
 import { sendTelegramAlert } from "@/lib/telegram";
 
-export async function GET(request: Request) {
+export async function GET() {
   await sendTelegramAlert("Resume download clicked");
 
   const filePath = path.join(process.cwd(), "public", "resume.txt");

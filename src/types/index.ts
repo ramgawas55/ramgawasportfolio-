@@ -15,7 +15,7 @@ export type SkillCategory = {
   items: SkillItem[];
 };
 
-export type ProjectCategory = "Linux" | "AWS" | "DevOps";
+export type ProjectCategory = "Linux" | "AWS" | "DevOps" | "Web";
 
 export type Project = {
   title: string;
@@ -33,6 +33,13 @@ export type Experience = {
   period: string;
   location: string;
   highlights: string[];
+};
+
+export type Education = {
+  program: string;
+  institution: string;
+  period: string;
+  score: string;
 };
 
 export type TerminalCommand = {

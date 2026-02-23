@@ -2,7 +2,13 @@
 
 import { ProjectCategory } from "@/types";
 
-const filters: (ProjectCategory | "All")[] = ["All", "Linux", "AWS", "DevOps"];
+const filters: (ProjectCategory | "All")[] = [
+  "All",
+  "Linux",
+  "AWS",
+  "DevOps",
+  "Web",
+];
 
 export default function FilterTabs({
   active,
@@ -19,8 +25,8 @@ export default function FilterTabs({
           onClick={() => onChange(filter)}
           className={`rounded-full border px-4 py-2 text-xs uppercase tracking-[0.3em] transition ${
             active === filter
-              ? "border-[#ff2d55] bg-[#ff2d55] text-[#0b0f0b]"
-              : "border-[#1f2a20] text-[#8aa18a] hover:border-[#4dff8a] hover:text-[#4dff8a]"
+              ? "border-[#ff3b30] bg-[#ff3b30] text-[#000000]"
+              : "border-[#1a1a1a] text-[#c9c9c9] hover:border-[#ff4d22] hover:text-[#ff4d22]"
           }`}
         >
           {filter}

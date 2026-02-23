@@ -1,4 +1,5 @@
 import {
+  Education,
   Experience,
   Project,
   SkillCategory,
@@ -8,109 +9,210 @@ import {
 
 export const profile = {
   name: "Ram Sunil Gawas",
-  title: "Aspiring DevOps & Linux System Engineer",
-  location: "Mumbai, Maharashtra",
+  title: "Linux System Administrator & DevOps Engineer (Trainee)",
+  subtitle:
+    "DevOps & Cloud Engineer focused on building secure, scalable, and automated infrastructure.",
+  intro:
+    "Hands-on with Linux server administration, AWS EC2/S3/IAM, Terraform (Infrastructure-as-Code), Ansible automation, CI/CD pipelines using GitHub Actions, web server deployment, and cloud-based provisioning. I enjoy solving real infrastructure problems and automating everything I can.",
+  location: "Mumbai, Maharashtra, India",
   email: "ramgawas55@gmail.com",
+  phone: "+91-9324863145",
   linkedin: "https://www.linkedin.com/in/ram-gawas-2215a12a7/",
+  github: "https://github.com/ramgawas55",
   summary:
-    "Aspiring DevOps and Linux System Engineer with hands-on lab experience in Linux administration, AWS cloud services, Infrastructure as Code, and configuration management. Skilled in server deployment, automation, networking, security hardening, and troubleshooting with a foundation in system reliability and cloud infrastructure management.",
+    "I’m a Linux System Administrator and aspiring DevOps Engineer with experience in deploying and managing Linux servers, building AWS cloud infrastructure (EC2, S3, IAM), writing TerraformIaC configurations, automating provisioning with Ansible, and implementing CI/CD pipelines using GitHub Actions. I enjoy working close to the OS, securing systems, and building automated infrastructure.",
+  badges: [
+    "Linux & Server Administration",
+    "AWS · Terraform · Ansible",
+    "CI/CD · GitHub Actions · Automation",
+  ],
 };
 
 export const timeline: TimelineItem[] = [
   {
-    timestamp: "2024-10-01 09:12:18",
-    message: "Built Terraform configs for AWS EC2 provisioning and VPC rules.",
+    timestamp: "2024-11-18 10:14:22",
+    message: "Provisioned AWS EC2 instances with Terraform modules and IAM roles.",
     level: "SUCCESS",
   },
   {
-    timestamp: "2024-07-14 16:48:02",
-    message: "Automated web server and firewall setup using Ansible playbooks.",
+    timestamp: "2024-09-07 14:03:51",
+    message: "Automated Nginx, Apache, MySQL, and firewall setup using Ansible.",
     level: "INFO",
   },
   {
-    timestamp: "2023-08-21 11:30:45",
-    message: "Configured AWS EC2, IAM policies, S3 buckets, and Apache/Nginx.",
+    timestamp: "2024-06-22 08:32:10",
+    message: "Built CI/CD pipelines with GitHub Actions and Nginx reverse proxy.",
     level: "SUCCESS",
   },
   {
-    timestamp: "2023-06-12 08:20:09",
-    message: "Completed Linux administration lab on CentOS/RHEL environments.",
-    level: "WARN",
+    timestamp: "2024-04-02 09:12:05",
+    message: "Hardened Linux servers with SSH, firewalld, and SSL/TLS configs.",
+    level: "INFO",
   },
 ];
 
 export const philosophies: string[] = [
   "$ automate --repeatable",
-  "$ harden --every-service",
+  "$ secure --by-default",
   "$ monitor --everything",
-  "$ validate --before-deploy",
+  "$ ship --with-confidence",
   "$ document --for-clarity",
 ];
 
 export const skillCategories: SkillCategory[] = [
   {
-    title: "Linux & DevOps",
+    title: "Linux & Server Administration",
     items: [
       {
-        name: "Linux Administration",
-        level: 90,
+        name: "Linux (RHEL, CentOS, Ubuntu)",
+        level: 92,
         tooltip:
-          "User & group management, file permissions, ACLs, LVM, process & service management, cron jobs, package management, systemctl, journalctl",
+          "User/group management, permissions, services, package management",
       },
       {
-        name: "Cloud (AWS)",
-        level: 84,
-        tooltip: "EC2, S3, IAM, security groups, key pairs",
-      },
-      {
-        name: "Automation & Scripting",
+        name: "Shell Scripting",
         level: 82,
-        tooltip: "Ansible, Terraform, Shell scripting (Bash), YAML",
+        tooltip: "Bash automation for provisioning and maintenance tasks",
       },
       {
-        name: "Networking",
+        name: "Nginx",
         level: 80,
-        tooltip: "TCP/IP, UDP, DNS, DHCP, subnetting, VLANs, routing, SSH",
+        tooltip: "Reverse proxy, static hosting, TLS configuration",
       },
-    ],
-  },
-  {
-    title: "Backend",
-    items: [
       {
-        name: "Web & Databases",
+        name: "Apache",
         level: 78,
-        tooltip: "Apache, Nginx, MySQL, MongoDB",
+        tooltip: "Virtual hosts, modules, and server hardening",
       },
       {
-        name: "Security",
-        level: 78,
-        tooltip: "firewalld, iptables, SSH hardening, SSL/TLS, OpenSSL",
+        name: "Systemd (systemctl, journalctl)",
+        level: 84,
+        tooltip: "Service management, logging, and troubleshooting",
       },
       {
-        name: "File Services & Storage",
-        level: 74,
-        tooltip: "NFS, Samba, FTP, LVM",
-      },
-      {
-        name: "Monitoring & Troubleshooting",
+        name: "LVM",
         level: 76,
-        tooltip: "top, ps, sar, netstat/ss, systemctl, journalctl, logs",
+        tooltip: "Logical volume management and storage layouts",
+      },
+      {
+        name: "NFS",
+        level: 74,
+        tooltip: "Shared storage and exports management",
+      },
+      {
+        name: "Samba",
+        level: 72,
+        tooltip: "SMB file sharing in mixed environments",
+      },
+      {
+        name: "Process & Network Tools",
+        level: 78,
+        tooltip: "top, ps, netstat, ss for diagnostics",
       },
     ],
   },
   {
-    title: "Frontend",
+    title: "Cloud & Automation",
     items: [
       {
-        name: "Version Control & CI/CD",
-        level: 78,
-        tooltip: "Git, GitHub, CI/CD fundamentals",
+        name: "AWS (EC2, S3, IAM)",
+        level: 84,
+        tooltip: "Compute, storage, IAM, and security groups",
       },
       {
-        name: "Virtualization",
+        name: "Terraform",
+        level: 80,
+        tooltip: "Infrastructure as Code for repeatable provisioning",
+      },
+      {
+        name: "Ansible",
+        level: 82,
+        tooltip: "Automated server provisioning and configuration",
+      },
+      {
+        name: "GitHub Actions",
+        level: 78,
+        tooltip: "CI/CD workflows and deployment automation",
+      },
+      {
+        name: "Git",
+        level: 80,
+        tooltip: "Version control for infrastructure and apps",
+      },
+      {
+        name: "GitHub",
+        level: 78,
+        tooltip: "Repo management, collaboration, and CI tooling",
+      },
+      {
+        name: "YAML",
+        level: 76,
+        tooltip: "Configuration for CI/CD and automation",
+      },
+    ],
+  },
+  {
+    title: "Networking & Security",
+    items: [
+      {
+        name: "TCP/IP",
+        level: 80,
+        tooltip: "Networking fundamentals and troubleshooting",
+      },
+      {
+        name: "SSH",
+        level: 82,
+        tooltip: "Secure remote access and hardening",
+      },
+      {
+        name: "DNS",
+        level: 76,
+        tooltip: "Name resolution and record management",
+      },
+      {
+        name: "DHCP",
         level: 74,
-        tooltip: "VMware",
+        tooltip: "Network address assignment and configuration",
+      },
+      {
+        name: "Firewalld",
+        level: 76,
+        tooltip: "Firewall zones, rules, and service access",
+      },
+      {
+        name: "iptables",
+        level: 76,
+        tooltip: "Rule-based packet filtering",
+      },
+      {
+        name: "SSL/TLS",
+        level: 78,
+        tooltip: "Certificate management and secure transport",
+      },
+      {
+        name: "OpenSSL",
+        level: 74,
+        tooltip: "Certificate tooling and encryption basics",
+      },
+    ],
+  },
+  {
+    title: "Databases & Virtualization",
+    items: [
+      {
+        name: "MySQL",
+        level: 74,
+        tooltip: "Schema setup, users, backups, and tuning",
+      },
+      {
+        name: "MongoDB",
+        level: 72,
+        tooltip: "Collections, users, and basic administration",
+      },
+      {
+        name: "VMware Workstation",
+        level: 72,
+        tooltip: "Local virtualization and lab environments",
       },
     ],
   },
@@ -118,103 +220,150 @@ export const skillCategories: SkillCategory[] = [
 
 export const projects: Project[] = [
   {
-    title: "AUTO PATCH",
-    summary:
-      "Centralized Linux patch management platform with agent polling, approvals, audit logs, and a clean dashboard.",
-    stack: ["FastAPI", "PostgreSQL", "Next.js", "Docker", "Linux", "Python"],
-    category: "DevOps",
-    github: "https://github.com/ramgawas55/Auto-Patch.git",
-    highlights: [
-      "Built approvals workflow with audit logs and scheduling",
-      "Agent checks in every minute to report patch status",
-      "Render-ready deployment with Blueprint support",
-    ],
-  },
-  {
     title: "SecureDistro (SentinelOS-Lite)",
     summary:
-      "Linux-focused self-healing security stack with an agent, rule engine, anomaly detection, REST API, dashboard, CLI, and Telegram alerting.",
-    stack: ["Linux", "Security", "Docker", "Node.js", "Next.js", "Python"],
+      "Self-healing Linux security system with agent-based monitoring, rule engine automation, anomaly detection, REST API, SQLite, dashboard, CLI, and Docker support.",
+    stack: ["Linux", "Python", "Node.js", "SQLite", "Docker", "Next.js"],
     category: "DevOps",
-    github: "https://github.com/ramgawas55/SecureDistro.git",
+    github: "https://github.com/ramgawas55/SecureDistro",
     highlights: [
-      "Automated service recovery with rule-driven actions",
-      "Shipped REST API with SQLite storage and token auth",
-      "Built dashboard and CLI for operational workflows",
+      "Agent-based security telemetry with rule-driven remediation",
+      "REST API + CLI for operational workflows and visibility",
+      "Dashboard for anomaly insights and incident tracking",
     ],
   },
   {
-    title: "Linux Server Administration Lab",
+    title: "Learn-with-Linux (LinuxLab Academy)",
     summary:
-      "Hands-on lab focused on Linux user management, LVM, SSH hardening, CRON scheduling, and troubleshooting.",
-    stack: ["Linux", "SSH", "CRON", "LVM", "CentOS/RHEL"],
-    category: "Linux",
-    github: "https://github.com/ramgawas55",
+      "Demon Slayer–themed Linux learning platform with lessons, labs, progress tracking, PostgreSQL, Prisma, JWT auth, and a Next.js 14 UI.",
+    stack: ["Next.js", "PostgreSQL", "Prisma", "JWT", "TypeScript", "Tailwind"],
+    category: "Web",
+    github: "https://github.com/ramgawas55/Learn-with-Linux",
     highlights: [
-      "Configured user permissions and secure access controls",
-      "Automated routine jobs with CRON schedules",
-      "Diagnosed service issues across lab nodes",
+      "Lesson and lab modules with gated progress tracking",
+      "Secure authentication with JWT and Prisma",
+      "Immersive UI with themed content and dashboards",
     ],
   },
   {
-    title: "AWS Cloud Practice",
+    title: "Linux x DevOps Portfolio",
     summary:
-      "Deployed EC2 instances, set up security groups, managed IAM policies, and configured S3 storage.",
-    stack: ["AWS EC2", "S3", "IAM", "Apache", "Nginx"],
-    category: "AWS",
-    github: "https://github.com/ramgawas55",
+      "Terminal-inspired portfolio with motion UI, Telegram alerts, and a dedicated resume route.",
+    stack: ["Next.js", "TailwindCSS", "Framer Motion", "TypeScript"],
+    category: "Web",
+    github: "https://github.com/ramgawas55/ramgawasportfolio-",
     highlights: [
-      "Provisioned web servers and deployed sample sites",
-      "Hardened access with IAM and security groups",
-      "Managed cloud storage buckets and policies",
+      "Terminal-styled sections and animated navigation",
+      "Integrated contact form with Telegram notifications",
+      "Resume download route and engagement tracking",
     ],
   },
   {
-    title: "Infrastructure Automation",
+    title: "Demon Slayer Character Vault",
     summary:
-      "Automated Linux server setup with Ansible and provisioned AWS resources using Terraform.",
-    stack: ["Ansible", "Terraform", "Linux", "YAML", "AWS"],
-    category: "AWS",
-    github: "https://github.com/ramgawas55",
+      "Character showcase with admin upload flows, motion UI, and responsive galleries.",
+    stack: ["Next.js", "TailwindCSS", "Framer Motion"],
+    category: "Web",
+    github: "https://github.com/ramgawas55/demon-slayer-character-vault",
     highlights: [
-      "Created playbooks for web/database installs",
-      "Built Terraform templates for EC2 provisioning",
-      "Applied infrastructure as code best practices",
+      "Admin upload system for character entries",
+      "Animated character cards and dynamic layouts",
+      "Responsive showcase optimized for mobile",
+    ],
+  },
+  {
+    title: "Auto-Patch",
+    summary:
+      "Centralized Linux patching system for automated multi-server updates via SSH.",
+    stack: ["Python", "FastAPI", "Linux", "SSH", "PostgreSQL", "Docker"],
+    category: "DevOps",
+    github: "https://github.com/ramgawas55/Auto-Patch",
+    highlights: [
+      "Centralized approvals, audit logs, and scheduling",
+      "Agent polling and patch compliance reporting",
+      "Multi-server rollout with rollback readiness",
+    ],
+  },
+  {
+    title: "DeployPulse",
+    summary:
+      "CI/CD deployment status visualization dashboard for pipeline observability.",
+    stack: ["Next.js", "Node.js", "GitHub Actions", "API", "Charts"],
+    category: "DevOps",
+    github: "https://github.com/ramgawas55/DeployPulse",
+    highlights: [
+      "Pipeline status cards with real-time updates",
+      "Deployment timelines and release health views",
+      "Metrics for failed, pending, and successful runs",
     ],
   },
 ];
 
 export const experience: Experience[] = [
   {
-    role: "Practical Experience",
-    company: "Linux & AWS Labs",
-    period: "2023 — Present",
+    role: "AWS Cloud Infrastructure Deployment",
+    company: "Hands-on Labs",
+    period: "2024 — Present",
     location: "Mumbai",
     highlights: [
-      "Performed Linux user management, package installations, and CRON scheduling.",
-      "Configured AWS EC2 instances and deployed Apache/Nginx web servers.",
-      "Created Terraform configurations and Ansible playbooks for automation.",
+      "Launched EC2 Linux instances and configured security groups and SSH.",
+      "Managed IAM roles and policies with least-privilege access control.",
+      "Created S3 buckets and deployed Nginx/Apache web servers.",
     ],
   },
   {
-    role: "B.Sc. Information Technology",
-    company: "Mumbai University",
-    period: "2023 — 2025",
+    role: "Automated Linux Provisioning with Ansible",
+    company: "Infrastructure Automation Labs",
+    period: "2024",
     location: "Mumbai",
     highlights: [
-      "Focused on systems, networking, and cloud fundamentals.",
-      "Applied lab knowledge to real-world Linux administration.",
+      "Automated installation/configuration of Nginx, Apache, and MySQL.",
+      "Implemented firewall rules and service hardening via playbooks.",
+      "Reduced manual setup time by 70% using repeatable automation.",
     ],
   },
   {
-    role: "Higher Secondary Education",
-    company: "Maharashtra Board",
-    period: "2020 — 2022",
+    role: "CI/CD Pipeline Deployment (GitHub Actions)",
+    company: "DevOps Practice",
+    period: "2024",
     location: "Mumbai",
     highlights: [
-      "Class XII: 59.33%",
-      "Class X: 66.00%",
+      "Automated build and deployment workflows with GitHub Actions.",
+      "Set up Nginx reverse proxy for consistent deployments.",
+      "Improved deployment reliability with standardized pipelines.",
     ],
+  },
+  {
+    role: "Infrastructure Provisioning with Terraform",
+    company: "IaC Practice",
+    period: "2024",
+    location: "Mumbai",
+    highlights: [
+      "Provisioned EC2 instances using Infrastructure as Code.",
+      "Created modular Terraform configurations for reuse.",
+      "Managed security groups and networking in code.",
+    ],
+  },
+];
+
+export const education: Education[] = [
+  {
+    program: "B.Sc IT – Mumbai University",
+    institution: "Mumbai University",
+    period: "2023–2025",
+    score: "CGPA: 6.35",
+  },
+  {
+    program: "Class XII – Maharashtra Board",
+    institution: "Maharashtra Board",
+    period: "2020",
+    score: "66%",
+  },
+  {
+    program: "Class X – Maharashtra Board",
+    institution: "Maharashtra Board",
+    period: "2022",
+    score: "59.33%",
   },
 ];
 
@@ -231,32 +380,32 @@ export const terminalCommands: TerminalCommand[] = [
     command: "about",
     output: [
       profile.summary,
-      "Focus: Linux administration, AWS cloud services, and automation.",
+      "Focus: Linux administration, AWS infrastructure, automation, and CI/CD.",
     ],
   },
   {
     command: "skills",
     output: [
       "Linux Administration: Users, permissions, ACLs, LVM, systemctl, journalctl",
-      "Cloud (AWS): EC2, S3, IAM, security groups, key pairs",
-      "Automation & Scripting: Ansible, Terraform, Bash, YAML",
-      "Networking: TCP/IP, UDP, DNS, DHCP, VLANs, routing, SSH",
-      "Web & Databases: Apache, Nginx, MySQL, MongoDB",
-      "Security: firewalld, iptables, SSH hardening, SSL/TLS",
-      "File Services & Storage: NFS, Samba, FTP, LVM",
-      "Monitoring & Troubleshooting: top, ps, sar, netstat/ss, logs",
-      "Version Control & CI/CD: Git, GitHub, CI/CD fundamentals",
-      "Virtualization: VMware",
+      "Cloud (AWS): EC2, S3, IAM",
+      "Automation: Terraform, Ansible, Bash, YAML",
+      "CI/CD: GitHub Actions, Git, GitHub",
+      "Networking: TCP/IP, DNS, DHCP, SSH",
+      "Security: firewalld, iptables, SSL/TLS, OpenSSL",
+      "Servers: Nginx, Apache, MySQL, MongoDB",
+      "Storage: NFS, Samba, LVM",
+      "Observability: top, ps, netstat, journalctl, systemctl",
     ],
   },
   {
     command: "projects",
     output: [
-      "AUTO PATCH — centralized Linux patch management",
-      "SecureDistro (SentinelOS-Lite) — self-healing security stack",
-      "Linux Server Administration Lab — core Linux workflows",
-      "AWS Cloud Practice — EC2, S3, IAM deployment labs",
-      "Infrastructure Automation — Ansible and Terraform",
+      "SecureDistro — self-healing Linux security stack",
+      "Learn-with-Linux — Linux learning platform",
+      "Linux x DevOps Portfolio — terminal-inspired portfolio",
+      "Demon Slayer Character Vault — animated showcase",
+      "Auto-Patch — centralized Linux patching",
+      "DeployPulse — CI/CD deployment dashboard",
     ],
   },
   {
@@ -264,7 +413,7 @@ export const terminalCommands: TerminalCommand[] = [
     output: [
       "Email: ramgawas55@gmail.com",
       "Phone: +91-9324863145",
-      "Location: Mumbai, Maharashtra",
+      "Location: Mumbai, Maharashtra, India",
     ],
   },
 ];

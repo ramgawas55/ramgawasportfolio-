@@ -28,9 +28,9 @@ export default function ClientProviders({ children }: { children: ReactNode }) {
         position="bottom-right"
         toastOptions={{
           style: {
-            background: "#121a14",
-            color: "#e6ffe9",
-            border: "1px solid #1f2a20",
+            background: "#0d0d0d",
+            color: "#ffffff",
+            border: "1px solid #1a1a1a",
           },
         }}
       />

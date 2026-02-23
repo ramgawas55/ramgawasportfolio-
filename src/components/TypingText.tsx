@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
 export default function TypingText({
   text,
   speed = 40,
@@ -11,21 +9,19 @@ export default function TypingText({
   speed?: number;
   className?: string;
 }) {
-  const [displayed, setDisplayed] = useState("");
+  const characterCount = Math.max(text.length, 1);
+  const durationMs = Math.max(characterCount * speed, 400);
 
-  useEffect(() => {
-    setDisplayed("");
-    const characters = text.split("");
-    let index = 0;
-    const interval = window.setInterval(() => {
-      index += 1;
-      setDisplayed(characters.slice(0, index).join(""));
-      if (index >= characters.length) {
-        window.clearInterval(interval);
-      }
-    }, speed);
-    return () => window.clearInterval(interval);
-  }, [text, speed]);
-
-  return <span className={className}>{displayed}</span>;
+  return (
+    <span
+      className={`typing-text ${className ?? ""}`}
+      style={{
+        ["--typing-width" as string]: `${characterCount}ch`,
+        ["--typing-steps" as string]: String(characterCount),
+        ["--typing-duration" as string]: `${durationMs}ms`,
+      }}
+    >
+      {text}
+    </span>
+  );
 }

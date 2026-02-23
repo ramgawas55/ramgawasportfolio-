@@ -3,31 +3,28 @@
 import { motion } from "framer-motion";
 import Section from "@/components/Section";
 import TimelineLog from "@/components/TimelineLog";
-import { philosophies, profile, timeline } from "@/data/profile";
+import { profile, timeline } from "@/data/profile";
 
 export default function AboutPage() {
   return (
     <div>
       <Section
         eyebrow="about"
-        title="Engineering with a Linux core"
-        description="I build systems that behave predictably under pressure. My workflow blends terminal-first discipline with modern UX, so every interface feels fast, intentional, and trusted."
+        title="Linux-first systems, DevOps mindset"
+        description={profile.subtitle}
       >
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-4 text-sm leading-relaxed text-[#8aa18a]">
+          <div className="space-y-4 text-sm leading-relaxed text-[#c9c9c9]">
             <p>{profile.summary}</p>
-            <p>
-              My focus is to reduce operational friction by aligning product UX,
-              automation, and observability from day one. I translate complex
-              requirements into developer-friendly experiences that scale.
-            </p>
-            <div className="rounded-2xl border border-[#1f2a20] bg-[#0f1410] p-5 font-mono text-xs uppercase tracking-[0.3em] text-[#4dff8a]">
-              Philosophy
-              <div className="mt-4 space-y-2 text-[#8aa18a]">
-                {philosophies.map((line) => (
-                  <div key={line}>{line}</div>
-                ))}
-              </div>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {profile.badges.map((badge) => (
+                <span
+                  key={badge}
+                  className="rounded-full border border-[#1a1a1a] bg-[#050505] px-4 py-2 text-xs uppercase tracking-[0.28em] text-[#ff3b30]"
+                >
+                  {badge}
+                </span>
+              ))}
             </div>
           </div>
           <div className="space-y-4">

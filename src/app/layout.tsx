@@ -18,30 +18,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ram Sunil Gawas | Full-Stack Engineer",
+  title: "Ram Sunil Gawas | Linux System Administrator & DevOps Engineer",
   description:
-    "Linux-first full-stack portfolio blending terminal aesthetics with high-performance UI systems.",
+    "Linux System Administrator & DevOps Engineer portfolio focused on secure, scalable, automated infrastructure.",
   keywords: [
-    "Full-Stack Engineer",
-    "Linux",
+    "Linux System Administrator",
+    "DevOps Engineer",
+    "AWS",
+    "Terraform",
+    "Ansible",
+    "CI/CD",
+    "GitHub Actions",
     "Next.js Portfolio",
-    "React",
-    "DevOps",
   ],
-  metadataBase: new URL("https://ramgawas.dev"),
+  metadataBase: new URL("https://ramgawas55.in"),
   openGraph: {
-    title: "Ram Sunil Gawas | Full-Stack Engineer",
+    title: "Ram Sunil Gawas | Linux System Administrator & DevOps Engineer",
     description:
-      "Production-ready portfolio inspired by Linux terminals and Spider-Man motion design.",
-    url: "https://ramgawas.dev",
+      "Professional Linux + DevOps portfolio with terminal-inspired UI and motion.",
+    url: "https://ramgawas55.in",
     siteName: "Ram Sunil Gawas Portfolio",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ram Sunil Gawas | Full-Stack Engineer",
+    title: "Ram Sunil Gawas | Linux System Administrator & DevOps Engineer",
     description:
-      "Linux-first full-stack portfolio with terminal-inspired UI and motion.",
+      "Linux + DevOps portfolio with neon blue/purple terminal aesthetics.",
   },
 };
 
@@ -53,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-[#0b0f0b] text-[#e6ffe9] antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-[#000000] text-[#ffffff] antialiased`}
       >
         <ClientProviders>
           <BackgroundWeb />

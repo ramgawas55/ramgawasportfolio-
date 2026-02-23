@@ -1,13 +1,13 @@
 Ram Sunil Gawas
-Aspiring DevOps & Linux System Engineer
-Mumbai, Maharashtra
+Linux System Administrator & DevOps Engineer (Trainee)
+Mumbai, Maharashtra, India
 Phone: +91-9324863145
 Email: ramgawas55@gmail.com
 LinkedIn: https://linkedin.com/in/ram-gawas-2215a12a7
 GitHub: https://github.com/ramgawas55
 
 Profile Summary
-Aspiring DevOps and Linux System Engineer with hands-on lab experience in Linux administration, AWS cloud services, Infrastructure as Code (Terraform), and configuration management (Ansible). Skilled in server deployment, automation, networking, security hardening, and troubleshooting. Strong foundation in system reliability, scripting, and cloud infrastructure management.
+I’m a Linux System Administrator and aspiring DevOps Engineer with experience in deploying and managing Linux servers, building AWS cloud infrastructure (EC2, S3, IAM), writing TerraformIaC configurations, automating provisioning with Ansible, and implementing CI/CD pipelines using GitHub Actions. I enjoy working close to the OS, securing systems, and building automated infrastructure.
 
 Skills
 - Linux Administration: User management, permissions, LVM, SSH, CRON, package management
@@ -22,12 +22,12 @@ Skills
 - Virtualization: VMware
 
 Education
-- B.Sc. Information Technology | Mumbai University (CGPA - 6.35 | 2023–2025)
-- Class XII | Maharashtra Board | Mumbai (59.33% | 2022)
-- Class X | Maharashtra Board | Mumbai (66.00% | 2020)
+- B.Sc IT | Mumbai University (CGPA - 6.35 | 2023–2025)
+- Class XII | Maharashtra Board (66% | 2020)
+- Class X | Maharashtra Board (59.33% | 2022)
 
 Practical Experience
-- Linux Server Administration Lab — user management, package installs, LVM setup, SSH configuration, CRON scheduling, and troubleshooting in CentOS/RHEL lab environments.
-- AWS Cloud Practice — launched EC2 instances, configured security groups, managed IAM policies, created S3 buckets, and deployed Apache/Nginx web servers.
-- Automation with Ansible — developed playbooks to automate web server setup, database installation, and firewall rules across Linux nodes.
-- Infrastructure Provisioning with Terraform — created Terraform configurations to provision AWS EC2 instances and network security rules using Infrastructure as Code principles.
+- AWS Cloud Infrastructure Deployment — launched EC2 Linux instances, configured security groups & SSH, managed IAM roles/policies, created S3 buckets, deployed Nginx/Apache web servers.
+- Automated Linux Provisioning with Ansible — automated installation/configuration of Nginx, Apache, MySQL, and firewall rules; reduced manual setup time by 70%.
+- CI/CD Pipeline Deployment (GitHub Actions) — automated build and deployment workflow, set up Nginx reverse proxy, improved deployment consistency and reliability.
+- Infrastructure Provisioning with Terraform — provisioned EC2 instances using IaC, created modular Terraform configs, managed security groups in code.

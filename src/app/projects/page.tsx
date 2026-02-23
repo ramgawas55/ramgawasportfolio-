@@ -18,8 +18,8 @@ export default function ProjectsPage() {
   return (
     <Section
       eyebrow="projects"
-      title="Selected builds with production impact"
-      description="Each project is designed to ship quickly without sacrificing reliability. Filter by discipline to explore what matters most."
+      title="GitHub projects and technical builds"
+      description="Polished project cards covering Linux automation, CI/CD, and DevOps tooling."
     >
       <FilterTabs active={active} onChange={setActive} />
       <div className="mt-8 grid gap-6 md:grid-cols-2">

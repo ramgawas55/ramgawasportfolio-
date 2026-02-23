@@ -13,7 +13,17 @@ export default function TerminalConsole({
 }: {
   onSectionChange?: (section: string) => void;
 }) {
-  const [history, setHistory] = useState<TerminalEntry[]>([]);
+  const [history, setHistory] = useState<TerminalEntry[]>(() => {
+    const helpOutput =
+      terminalCommands.find((command) => command.command === "help")?.output ??
+      [];
+    return [
+      {
+        command: "help",
+        output: helpOutput,
+      },
+    ];
+  });
   const [input, setInput] = useState("");
   const inputRef = useRef<HTMLInputElement | null>(null);
   const commandMap = useMemo(
@@ -24,15 +34,6 @@ export default function TerminalConsole({
       }, {}),
     []
   );
-
-  useEffect(() => {
-    setHistory([
-      {
-        command: "help",
-        output: commandMap.help ?? [],
-      },
-    ]);
-  }, [commandMap]);
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -68,22 +69,22 @@ export default function TerminalConsole({
   };
 
   return (
-    <div className="rounded-3xl border border-[#1f2a20] bg-[#0f1410] p-6 font-mono text-sm text-[#e6ffe9] neon-border">
-      <div className="flex items-center gap-3 border-b border-[#1f2a20] pb-4">
-        <div className="h-3 w-3 rounded-full bg-[#ff2d55]" />
-        <div className="h-3 w-3 rounded-full bg-[#ffb347]" />
-        <div className="h-3 w-3 rounded-full bg-[#4dff8a]" />
-        <div className="ml-3 text-xs uppercase tracking-[0.3em] text-[#8aa18a]">
+    <div className="rounded-3xl border border-[#1a1a1a] bg-[#050505] p-6 font-mono text-sm text-[#ffffff] neon-border">
+      <div className="flex items-center gap-3 border-b border-[#1a1a1a] pb-4">
+        <div className="h-3 w-3 rounded-full bg-[#d63d28]" />
+        <div className="h-3 w-3 rounded-full bg-[#ff4d22]" />
+        <div className="h-3 w-3 rounded-full bg-[#ff3b30]" />
+        <div className="ml-3 text-xs uppercase tracking-[0.3em] text-[#c9c9c9]">
           terminal://portfolio
         </div>
       </div>
       <div className="mt-4 space-y-4">
         {history.map((entry, index) => (
           <div key={`${entry.command}-${index}`} className="space-y-2">
-            <div className="text-[#4dff8a]">
-              <span className="text-[#ff2d55]">$</span> {entry.command}
+            <div className="text-[#ff3b30]">
+              <span className="text-[#ff4d22]">$</span> {entry.command}
             </div>
-            <div className="space-y-1 text-[#8aa18a]">
+            <div className="space-y-1 text-[#c9c9c9]">
               {entry.output.map((line) => (
                 <div key={line}>{line}</div>
               ))}
@@ -92,16 +93,16 @@ export default function TerminalConsole({
         ))}
       </div>
       <form onSubmit={handleSubmit} className="mt-6 flex items-center gap-2">
-        <span className="text-[#ff2d55]">$</span>
+        <span className="text-[#ff4d22]">$</span>
         <input
           ref={inputRef}
           value={input}
           onChange={(event) => setInput(event.target.value)}
           placeholder="Type a command..."
           aria-label="Terminal command input"
-          className="w-full bg-transparent text-[#e6ffe9] outline-none placeholder:text-[#8aa18a]"
+          className="w-full bg-transparent text-[#ffffff] outline-none placeholder:text-[#c9c9c9]"
         />
-        <span className="terminal-cursor text-[#4dff8a]">█</span>
+        <span className="terminal-cursor text-[#ff3b30]">█</span>
       </form>
     </div>
   );
