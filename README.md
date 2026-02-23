@@ -1,65 +1,60 @@
-# Linux x DevOps Portfolio
+# Ram Sunil Gawas — Linux & DevOps Portfolio
 
-A terminal-inspired portfolio with motion-led UI, a live contact form, and lightweight visitor tracking. Built to feel fast and personal, with a CLI-style terminal mode and a downloadable resume endpoint.
+Hey, thanks for checking this out. This is my personal portfolio built around the way I actually work: terminal-first, clean UI, and a focus on real infrastructure work.
+It’s a small site, but it tells my story, shows my projects, and makes it easy to reach me.
 
-## Highlights
+## What this project does
+It’s a Next.js portfolio with a terminal-inspired UI, motion-driven sections, and a contact flow that can send Telegram alerts. It’s fast, minimal, and built to showcase Linux + DevOps work without fluff.
 
-- Terminal-style navigation page
-- Animated hero and section transitions
-- Contact form with validation + Telegram alerts
-- Visitor alerts for key pages
-- Resume download route with tracking
+## Why I built it
+I wanted a portfolio that felt like me, not a generic template. I live in terminals all day and I enjoy clean, serious interfaces, so I built one. It also pushed me to tighten up my frontend skills while keeping the content grounded in real infrastructure work.
 
-## Stack
+## Key features
+- Terminal-style hero and sections with smooth motion
+- Project and experience sections tailored for DevOps work
+- Contact form with Telegram alerts
+- Resume download endpoint
+- Mobile-friendly layout with a dark, neon theme
 
-- Next.js App Router
+## Tech stack
+- Next.js 16 (App Router)
 - React 19
-- Tailwind CSS
-- Framer Motion
 - TypeScript
+- Tailwind CSS v4
+- Framer Motion
 
-## Local Setup
+## How to run locally
+1. Install dependencies
+   ```
+   npm install
+   ```
+2. Start the dev server
+   ```
+   npm run dev
+   ```
+3. Open http://localhost:3000
 
-```bash
-npm install
-npm run dev
+## Environment variables
+These are optional, but recommended for contact + tracking alerts:
+
+```
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+TELEGRAM_CHAT_ID=your_telegram_chat_id
+CONTACT_EMAIL=hello@ramgawas.dev
 ```
 
-Open http://localhost:3000.
+If you skip them, the site still works, you just won’t get Telegram alerts.
 
-## Environment Variables
+## Screenshots
+Add your screenshots here:
+- https://placehold.co/1200x750?text=Hero
+- https://placehold.co/1200x750?text=Projects
+- https://placehold.co/1200x750?text=Contact
 
-```bash
-cp .env.example .env.local
-```
+## Future improvements
+- Add real case studies for automation projects
+- Add a blog section for troubleshooting writeups
+- Add performance/accessibility snapshots
 
-| Variable | Purpose |
-| --- | --- |
-| CONTACT_EMAIL | Contact API recipient |
-| TELEGRAM_BOT_TOKEN | Telegram bot token for alerts |
-| TELEGRAM_CHAT_ID | Telegram chat ID for alerts |
-
-## Project Map
-
-- src/app: routes, API handlers, layouts
-- src/components: UI building blocks
-- src/data: profile data and content
-- src/types: shared TypeScript types
-- public: static assets + resume
-
-## Deployment (Render)
-
-1. Create a new Web Service
-2. Connect the GitHub repository
-3. Build Command: `npm install && npm run build`
-4. Start Command: `npm run start`
-5. Set environment variables from the table above
-6. Use Node 20+
-
-## Scripts
-
-- `npm run dev` — local dev server
-- `npm run build` — production build
-- `npm run start` — production server
-- `npm run lint` — linting
-- `npm run typecheck` — TypeScript checks
+## Closing note
+I built this to feel honest and practical — the same way I approach infrastructure work. If it helps you or inspires your own portfolio, awesome. And if you’re hiring or want to chat, hit the contact page.
