@@ -9,7 +9,7 @@ import {
 
 export const profile = {
   name: "Ram Sunil Gawas",
-  title: "Linux System Administrator & DevOps Engineer (Trainee)",
+  title: "Linux System Administrator & DevOps Engineer (vibe coder)",
   subtitle:
     "DevOps & Cloud Engineer focused on building secure, scalable, and automated infrastructure.",
   intro:
