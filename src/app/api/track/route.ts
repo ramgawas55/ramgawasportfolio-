@@ -36,13 +36,19 @@ export async function POST(request: Request) {
 
   const userAgent = request.headers.get("user-agent") ?? "unknown";
   const visitorEmail = payload.email?.trim() || "unknown";
+
+  // If user provided a genuine email, render as markdown link, otherwise fallback
+  const displayEmail = visitorEmail !== "unknown" ? `[${visitorEmail}](mailto:${visitorEmail})` : "unknown";
+
   const lines = [
-    "Visitor alert",
-    `Event: ${event}`,
-    `Path: ${path}`,
+    "🚀 *Visitor alert*",
+    "",
+    `📄 Event: ${event}`,
+    `🌐 Path: ${path}`,
     `IP: ${ip}`,
-    `User-Agent: ${userAgent}`,
-    `Email: ${visitorEmail}`,
+    `📧 Email: ${displayEmail}`,
+    `🖥 Device: ${userAgent}`,
+    `⏰ Time: ${new Date().toISOString()}`
   ];
 
   await sendTelegramAlert(lines.join("\n"));

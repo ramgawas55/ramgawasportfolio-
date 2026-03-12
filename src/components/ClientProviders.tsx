@@ -13,11 +13,14 @@ export default function ClientProviders({ children }: { children: ReactNode }) {
     if (!trackedPaths.has(pathname)) {
       return;
     }
+
+    const email = typeof window !== "undefined" ? localStorage.getItem("visitor_email") || "unknown" : "unknown";
+
     fetch("/api/track", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ event: "page_view", path: pathname }),
-    }).catch(() => {});
+      body: JSON.stringify({ event: "page_view", path: pathname, email }),
+    }).catch(() => { });
   }, [pathname]);
 
   return (

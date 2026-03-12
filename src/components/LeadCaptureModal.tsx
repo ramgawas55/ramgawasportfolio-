@@ -54,6 +54,7 @@ export default function LeadCaptureModal() {
             }
 
             setStatus("success");
+            localStorage.setItem("visitor_email", email.trim());
 
             // Auto close after 3 seconds of success success
             setTimeout(() => {
