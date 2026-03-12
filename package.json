@@ -1,6 +1,7 @@
 {
   "name": "ramgawasportfolio",
   "version": "0.1.0",
+  "description": "Personal portfolio of Ram Sunil Gawas showcasing DevOps, cloud, and Linux projects.",
   "private": true,
   "scripts": {
     "dev": "next dev",

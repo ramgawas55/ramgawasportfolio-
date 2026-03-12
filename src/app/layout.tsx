@@ -6,6 +6,7 @@ import SiteFooter from "@/components/SiteFooter";
 import TransitionProvider from "@/components/TransitionProvider";
 import ClientProviders from "@/components/ClientProviders";
 import BackgroundWeb from "@/components/BackgroundWeb";
+import LeadCaptureModal from "@/components/LeadCaptureModal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -65,6 +66,7 @@ export default function RootLayout({
             <main>{children}</main>
             <SiteFooter />
           </TransitionProvider>
+          <LeadCaptureModal />
         </ClientProviders>
       </body>
     </html>
